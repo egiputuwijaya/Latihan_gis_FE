@@ -45,6 +45,9 @@ export default function EditLocationFull() {
         // 🔥 GET GEOJSON LOCATION
         const res = await fetch(
           `http://localhost:3001/kiosks/locations/${id}/geojson`,
+          {
+            credentials: "include",
+          },
         );
         const data = await res.json();
 
@@ -64,6 +67,9 @@ export default function EditLocationFull() {
         // 🔥 GET INFO LOCATION
         const infoRes = await fetch(
           `http://localhost:3001/kiosks/locations/${id}`,
+          {
+            credentials: "include",
+          },
         );
         const info = await infoRes.json();
 
@@ -112,6 +118,7 @@ export default function EditLocationFull() {
       const res = await fetch(`http://localhost:3001/kiosks/locations/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({
           name,
           description,

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import Hallo from "../../components/landingPage/Halo";
 
 export default function RegisterPage() {
   const [form, setForm] = useState({
